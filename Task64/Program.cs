@@ -5,6 +5,7 @@
 
 void PrintNumbers(int start, int end)
 {
+    start += start % 2;
     System.Console.Write(start + " ");
 
     if (start+2 <= end)
@@ -20,8 +21,4 @@ Console.WriteLine("Введите число M");
 int numM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число N");
 int numN = Convert.ToInt32(Console.ReadLine());
-if (numM % 2!=0)
-{
-    numM += 1;
-}
 PrintNumbers(numM,numN);
